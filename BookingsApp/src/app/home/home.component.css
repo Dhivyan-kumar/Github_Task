@@ -1,0 +1,21 @@
+button{
+    color:white;
+    background-color: black;
+    padding: 10px;
+    width:200px;
+    margin-left: -70px;
+    margin-top: 60px;
+    text-align: left;
+}
+.formbox{
+    margin-right:100px;
+    border-style: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.question h3,h6{
+  background-color: black;
+  color:white;
+}

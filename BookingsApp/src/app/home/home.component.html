@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col">
+      <button>FLIGHT BOOKING</button>
+      <br>
+      <button>BUS BOOKING</button>
+      <br>
+      <button>CAR BOOKING</button>
+      <br>
+      <button (click)="showForm()">HOTEL BOOKING</button>
+    </div>
+    <div class="col" >
+      <div class="formbox" *ngIf="formSelected">
+        <app-book></app-book>
+      </div>
+    </div>
+    <div class="col">
+      <div class="question">
+        <h3>Where?</h3>
+        <h6>You can reach us for any loaction</h6> 
+        <h3>When?</h3>
+        <h6>You can reach us for your Trip</h6><br>
+        <h3>Transport?</h3>
+        <h6>You can reach us for Flight, Bus, Car over country</h6>
+      </div>
+      </div>
+  </div>
