@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .background{
+                border:1px solid balck;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 id="changecolor">This is a documentation</h1>
+        <div class="background">
+            <p>This is something big</p>
+        </div>
+        <div class="background">
+            <p>This is something small</p>
+        </div>
+        <div>
+            First Name:<input name="fname" type="text" value="Pradeep">
+            First Name:<input name="fname" type="text" value="Kumar">
+            <p id="names"></p>
+        </div>
+        <div>
+            <p id="tags"></p>
+        </div>
+    </body>
+    <script>
+        const element=document.getElementById("changecolor");
+        element.style.color="green";
+        const collection=document.getElementsByClassName("background");
+        collection[1].style.backgroundColor="red";
+        let elements=document.getElementsByName("fname");
+        document.getElementById("names").innerHTML=elements[0].tagName;
+        const collections=document.getElementsByTagName("p");
+        let text ="";
+        for(let i=0;i<collections.length;i++)
+        {
+            text+=collections[i].tagName+"<br>";
+        }
+        document.getElementById("tags").innerHTML=text;
+    </script>
+</html>
