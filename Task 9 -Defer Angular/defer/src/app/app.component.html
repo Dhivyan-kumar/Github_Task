@@ -1,0 +1,20 @@
+<p>Hi</p>
+<!-- @if(fruitlist)
+{
+    <h1>Welcome to Fruit Shop</h1>
+} -->
+<button (click)="onSelect()">Click Me</button>
+@defer(when fruitlist){
+<app-fruit-list></app-fruit-list>
+}
+@placeholder(minimum 500ms){
+    <p>Fruit list content</p>
+}
+@loading (after 1s; minimum 20s) 
+{
+    <p>Loading....</p>
+}
+@error
+{
+    <p>Error in loading the page.</p>
+}

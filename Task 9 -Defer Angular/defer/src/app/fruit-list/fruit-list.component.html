@@ -1,0 +1,23 @@
+<p>fruit-list works!</p>
+<h1>FRUITS-LIST</h1>
+  <ul>
+    <li *ngFor="let fruit of fruits" (click)="onSelect(fruit)">
+        <a href="#">{{fruit.id}}-{{fruit.name}}</a>
+    </li>
+  </ul>
+  <div *ngIf="selectedFruit">
+    {{selectedFruit.id}}
+    <input type="text" name="name" [(ngModel)]="selectedFruit.name">
+  </div>
+<div>
+    <div class="row">
+      <select [(ngModel)]="selectedFruit">
+        <option *ngFor="let fruit of fruits">{{fruit.name}}</option>
+      </select>
+    </div>
+    <div class="row" [ngSwitch]="selectedFruit">
+      <div *ngSwitchCase="'Apple'">Apple is selected</div>
+      <div *ngSwitchCase="'Orange'">Orange is selected</div>
+      <div *ngSwitchDefault>No items selected</div>
+    </div>
+  </div>
